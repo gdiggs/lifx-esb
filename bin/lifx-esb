@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require "bundler"
+Bundler.require
+
+require "active_support/core_ext"
+
+require_relative "../empire_state_building"
+require_relative "../light"
+
+if ARGV.length != 1
+  abort "USAGE: bin/lifx-esb <label>"
+end
+
+light = Light.new(ARGV[0])
+
+while true do
+  EmpireStateBuilding.new.colors.each do |color|
+    light.set_color color
+    sleep 5
+  end
+end
