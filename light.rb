@@ -16,13 +16,15 @@ class Light
 
   private
 
-  memoize def client
+  def client
     LIFX::Client.lan.discover! do |c|
       c.lights.with_label label
     end
   end
+  memoize :client
 
-  memoize def lights
+  def lights
     client.lights.with_label label
   end
+  memoize :lights
 end

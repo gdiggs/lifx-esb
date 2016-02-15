@@ -14,7 +14,7 @@ end
 
 light = Light.new(ARGV[0])
 
-while true do
+loop do
   EmpireStateBuilding.new.colors.each do |color|
     light.set_color color
     sleep 5
