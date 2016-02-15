@@ -1,5 +1,7 @@
 # LIFX / Empire State Building
 
+[![Issue Count](https://codeclimate.com/github/GordonDiggs/lifx-esb/badges/issue_count.svg)](https://codeclimate.com/github/GordonDiggs/lifx-esb)
+
 Grab the current colors of the
 [Empire State Building](http://whatcoloristheempirestatebuilding.com/), and set
 an [LIFX bulb](http://www.lifx.com/) to those colors.
